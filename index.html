@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Crypto Wallet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="create-wallet-screen" class="screen">
+        <h1>Create Wallet</h1>
+        <button id="create-wallet-button" class="btn">Create Wallet</button>
+    </div>
+
+    <div id="secret-phrase-screen" class="screen" style="display:none;">
+        <h1>Your Secret Phrase</h1>
+        <div id="seed-phrase" class="seed-phrase"></div>
+        <button id="copy-seed-phrase" class="btn">Copy to Clipboard</button>
+        <button id="continue-button" class="btn">Continue</button>
+        <div id="copy-notify" class="notify">Seed phrase copied to clipboard!</div>
+    </div>
+
+    <div id="confirmation-screen" class="screen" style="display:none;">
+        <h1>Confirm Your Secret Phrase</h1>
+        <div id="confirmation-fields" class="confirmation-fields"></div>
+        <input id="confirmation-input" class="input" type="text" placeholder="Enter your secret phrase">
+        <div class="container">
+            <button id="button"></button>
+        </div>
+    </div>
+
+    <div id="wallet-interface" class="screen" style="display:none;">
+        <h1>Wallet Balance</h1>
+        <div id="balance">0.00 USDT</div>
+        <button class="btn" onclick="receiveCrypto()">Receive</button>
+        <button class="btn" onclick="sendCrypto()">Send</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
